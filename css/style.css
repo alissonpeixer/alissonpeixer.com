@@ -1,0 +1,78 @@
+:root{
+  --background: #30363d;
+
+  --black: #18161f;
+  --gray: #787490;
+  --white-ice: #d6d4e2;
+  --whute: #ffffff;
+  --blue-marine-: #00d9c0 
+}
+
+html, body{
+  background-color: var(--black);
+
+  font-family: 'Space Grotesk', sans-serif;
+}
+
+
+/* containers */
+.main-container{
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+
+  background-image: url(../assents/blur.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center bottom;
+}
+
+.footer-container{
+  color: var(--white-ice);
+  text-align: center;
+  background-color: #18161f;
+
+  font-size: 1.3rem;
+}
+
+.container{
+  width: 850px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+
+/* text style */
+.titulo-saudacao{
+  color: var(--white-ice);
+  font-weight: bold;
+  font-size: 10rem;
+}
+.copyright a{
+  color: var(--white-ice);
+  text-decoration:none;
+}
+
+/* svg style */
+.terra-svg img{
+  width: 300px; 
+}
+.terra-svg{
+  background-color: var( --blue-marine-);
+  border-radius: 100%;
+  width: 560px;
+  height: 310px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+/* hover style */
+
+.copyright a:hover{
+  color: var(--blue-marine-);
+  text-decoration: underline;
+}
