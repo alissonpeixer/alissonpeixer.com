@@ -15,23 +15,57 @@
     <link rel="stylesheet" href="css/style.css">
 
     <title>Alisson Peixer</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.net.min.js"></script>
+    <script>
+      window.addEventListener("DOMContentLoaded", ()=>{
+        VANTA.NET({
+        el: "#vanta",
+        mouseControls: true,
+        touchControls: true,
+        gyroControls: false,
+        minHeight: 20,
+        minWidth: 20,
+        scale: 0.8,
+        scaleMobile: 1.0,
+        color: 0xa0ffdb,
+        backgroundColor: 0xf0f0f
+        })
+      })
+    </script>
   </head>
   <body id="home">
-    <header>
-
+    <div id="vanta"></div>
+    <header id="header">
+      <span class="nav__logo">
+        <a href="#">
+          <img src="./assents/logo-az.svg" alt="">
+        </a>
+      </span>
+      <!-- <nav>
+        <ul class="nav__bar">
+          <li><a href="#contatct">Contato</a></li>
+          <li><a href="#portfolio">Portfolio</a></li>
+        </ul>
+      </nav> -->
     </header>
 
-    <main class="main-container">
-      <div class="container">
-        <span class="titulo-saudacao">Hello, World!</span>
-        <span class="terra-svg"><img src="./assents/Earth.svg" alt="" srcset=""></span>
+    <main id="main">
+      <div class="container__test">
+        <span class="frist__text">ALISSON PEIXER</span>
+        <div class="banner__container">
+          <h1 class="banner__title">Hello, World!</h1>
+        </div>
       </div>
+      
+      <div class="arrow__style">
+        <a href="#portfolio" >
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M15 13l-3 3m0 0l-3-3m3 3V8m0 13a9 9 0 110-18 9 9 0 010 18z" />
+          </svg>
+        </a>
+      </div> 
     </main>
-
-    <footer class="footer-container">
-      <span class="copyright">&copy; Desenvolvido com ❤️ by  <a href="https://github.com/alissonpeixer">Alisson Peixer</a></span>
-    </footer>
-
 
   </body>
 </html>

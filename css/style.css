@@ -1,78 +1,104 @@
-:root{
-  --background: #30363d;
-
+:root {
   --black: #18161f;
   --gray: #787490;
   --white-ice: #d6d4e2;
   --whute: #ffffff;
-  --blue-marine-: #00d9c0 
+  --blue-marine-: #00d9c0
 }
 
 html, body{
-  background-color: var(--black);
+  height: 100vh;
+  color: var(--white-ice);
 
   font-family: 'Space Grotesk', sans-serif;
-}
-
-
-/* containers */
-.main-container{
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-
   background-image: url(../assents/blur.png);
+  background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: center bottom;
 }
 
-.footer-container{
-  color: var(--white-ice);
-  text-align: center;
-  background-color: #18161f;
 
-  font-size: 1.3rem;
-}
-
-.container{
-  width: 850px;
+#header{
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 40px;
+  height: 40px;
+  background-color: #18161f64;
 }
 
+#main{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding-left: 40px;
+  padding-right: 40px;
+  height: 80vh;
 
+  background-color: #18161f84;
 
-/* text style */
-.titulo-saudacao{
-  color: var(--white-ice);
-  font-weight: bold;
-  font-size: 10rem;
 }
-.copyright a{
-  color: var(--white-ice);
-  text-decoration:none;
+#vanta{
+  z-index: -1;
+  position: absolute;
+
+  left: 0;
+  right: 0;
+  height: 100vh;
 }
 
-/* svg style */
-.terra-svg img{
-  width: 300px; 
+.nav__bar{
+  display: flex;
+  justify-content: space-between;
+  width: 160px;
 }
-.terra-svg{
-  background-color: var( --blue-marine-);
-  border-radius: 100%;
-  width: 560px;
-  height: 310px;
+
+.nav__logo{
+  font-weight: 700;
+  font-size: 24px;
+}
+
+.frist__text{
+  text-align: center;
+  letter-spacing: 10px;
+  opacity: 50%;
+}
+.banner__container{
   display: flex;
   align-items: center;
   justify-content: center;
 }
+.banner__title{
+  font-weight: 700;
+  font-size: 60px;
+  color: rgb(255, 255, 255);
+  text-align: center;
+  text-shadow: var(--black) 3px 2px 10px;
+  padding: 20px;
+}
+
+.arrow__style{
+  text-align: center;
+}
+.arrow__style svg{
+  width: 40px;
+  border-radius: 100%;
+}
+.arrow__style svg:active{
+  stroke: var(--blue-marine-);
+
+}
 
 
-/* hover style */
 
-.copyright a:hover{
-  color: var(--blue-marine-);
-  text-decoration: underline;
+/* teste */
+
+.container__test{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 150px;
+  min-height: 30%;
+  flex-wrap: nowrap;
+
 }
