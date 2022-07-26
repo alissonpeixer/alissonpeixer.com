@@ -92,6 +92,7 @@ html, body{
 /* teste */
 .container__test{
   display: flex;
+  
   flex-direction: column;
   /* justify-content: space-around; */
   height: 120px;
