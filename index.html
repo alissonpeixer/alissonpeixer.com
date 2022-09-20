@@ -1,53 +1,62 @@
 <!DOCTYPE html>
-  <html lang="pt-br">
+<html lang="pt-br">
   <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
 
-
-    <link rel="shortcut icon" href="./assents/logo-az.svg" type="image/x-icon">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;700&display=swap" rel="stylesheet">
-
-    <link rel="stylesheet" href="https://alissonpeixer.github.io//css/reset.css">
-    <link rel="stylesheet" href="https://alissonpeixer.github.io//css/style.css">
-
-    <title>Alisson Peixer</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.net.min.js"></script>
+
+    <link
+      rel="shortcut icon"
+      href="/assents/logo-az.svg"
+      type="image/x-icon"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="/css/reset.css" />
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/mobile.css" />
+    <title>Alisson Peixer</title>
+
     <script>
-      window.addEventListener("DOMContentLoaded", ()=>{
+      window.addEventListener("DOMContentLoaded", () => {
         VANTA.NET({
-        el: "#vanta",
-        mouseControls: true,
-        touchControls: true,
-        gyroControls: false,
-        minHeight: 20,
-        minWidth: 20,
-        scale: 0.8,
-        scaleMobile: 1.0,
-        color: 0xa0ffdb,
-        backgroundColor: 0xf0f0f
-        })
-      })
+          el: "#vanta",
+          mouseControls: true,
+          touchControls: true,
+          gyroControls: false,
+          minHeight: 20,
+          minWidth: 20,
+          scale: 0.8,
+          scaleMobile: 1.0,
+          color: 0xa0ffdb,
+          backgroundColor: 0xf0f0f,
+        });
+      });
     </script>
   </head>
-  <body id="home">
+  <body id="home" class="scroll">
     <div id="vanta"></div>
 
     <main id="main">
       <header id="header">
         <span class="nav__logo">
           <a href="#">
-            <img src="./assents/logo-az.svg" alt="">
+            <img src="/assents/logo-az.svg" alt="" />
           </a>
         </span>
         <nav>
           <ul class="nav__bar">
-            <li><a href="#contatct">Contato</a></li>
-            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#abountme">SOBRE MIM</a></li>
+            <li><a href="#project">PROJETOS</a></li>
           </ul>
         </nav>
       </header>
@@ -57,15 +66,123 @@
           <h1 class="banner__title">Hello, World!__</h1>
         </div>
       </div>
-      
+
       <div class="arrow__style">
-        <a href="#portfolio" >
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M15 13l-3 3m0 0l-3-3m3 3V8m0 13a9 9 0 110-18 9 9 0 010 18z" />
+        <a href="#abountme">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-6 w-6"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M15 13l-3 3m0 0l-3-3m3 3V8m0 13a9 9 0 110-18 9 9 0 010 18z"
+            />
           </svg>
         </a>
-      </div> 
+      </div>
     </main>
 
+    <section id="abountme" class="container">
+      <div class="section_container">
+        <div class="right">
+          <div class="content">
+            <div class="abount_me">
+              <h1 class="title_h1">Olá mundo!</h1>
+              <p>
+                Olá meu nome é <strong>Alisson Peixer</strong>
+                tenho 22 anos, sou de Biguaçu - SC.
+              </p>
+            </div>
+
+            <div class="stacks">
+              <span class="subtitle"
+                >Alguma das stacks que tenho conhecimento ou já usei</span
+              >
+              <div>
+                <img src="https://skillicons.dev/icons?i=js,html,css" alt="" />
+                <img
+                  src="https://skillicons.dev/icons?i=ts,nodejs,tailwind,materialui"
+                  alt=""
+                />
+                <img
+                  src="https://skillicons.dev/icons?i=express,react,vite,nextjs"
+                  alt=""
+                />
+                <img
+                  src="https://skillicons.dev/icons?i=prisma,sqlite,mongodb"
+                  alt=""
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="left">
+          <img
+            src="https://avatars.githubusercontent.com/u/48291580"
+            alt=""
+            srcset=""
+          />
+        </div>
+      </div>
+    </section>
+
+    <section id="project" class="container">
+      <div class="section_container">
+        <div class="right">
+          <div class="content">
+            <div class="abount_me">
+              <h1 class="title_h1">Projetos</h1>
+              <p>
+                Aqui tem a lista de algum dos meus projetos que estão disponivel
+                aqui no meu GitHub.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="left_2">
+          <a
+            class="project_demo"
+            href="https://github.com/alissonpeixer/to-do-list"
+          >
+            <span class="subtitle">To-do List</span>
+            <img src="/assents/to-do-list.png" alt="" srcset="" />
+          </a>
+
+          <a href="https://github.com/alissonpeixer/iconStacks" class="project_demo">
+            <span class="subtitle">Icon Stack's</span>
+            <img src="/assents/stack-icon.png" alt="" srcset="" />
+          </a>
+          <a href="https://github.com/alissonpeixer/spotify-ui-clone" class="project_demo">
+            <span class="subtitle">Spotify-ui Clone</span>
+            <img src="/assents/spotify-clone.png" alt="" srcset="" />
+          </a>
+          <a href="https://github.com/alissonpeixer/stone-ui-clone" class="project_demo">
+            <span class="subtitle">Stone-ui Clone</span>
+            <img src="/assents/stone-ui-clone.png" alt="" srcset="" />
+          </a>
+        </div>
+      </div>
+    </section>
+   
+      <footer>
+        
+        <div class="container_footer">
+          <div class="content_footer">
+            <span>Alisson Peixer</span>
+            <span>© 2022 Todos os direitos reservados.</span>
+          </div>
+          <a class="back_top" href="#vanta">Voltar para o topo</a>
+        </div>
+
+        
+      </footer>
+ 
+
+    <script src="/js/main.js"></script>
   </body>
 </html>

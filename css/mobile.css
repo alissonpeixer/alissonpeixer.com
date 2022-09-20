@@ -1,0 +1,28 @@
+@media only screen and (max-width: 900px) {
+
+
+  .section_container{ 
+    flex-direction: column;
+    align-items: center;
+  }
+
+
+
+  .left_2{
+    flex-direction: column;
+    align-items: center;
+  }
+  .left_2 img{
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .content_footer{
+    align-items: center;
+  }
+  .container_footer{
+    flex-direction: column;
+    align-items: center;
+  }
+
+}
