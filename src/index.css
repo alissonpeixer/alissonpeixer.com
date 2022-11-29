@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+body {
+    font-family: theme('fontFamily.serif');
+    color: theme('colors.white');
+}
+
+.bg-radind {
+    background: linear-gradient(91.43deg, #00FFB2 52.11%, rgba(0, 255, 178, 0.15625) 162.82%, #00FFB2 162.83%);
+}
