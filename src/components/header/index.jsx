@@ -1,23 +1,11 @@
 import { GitHubLogo } from '../assets/GitHubLogo'
 import { Arroba } from '../assets/Arroba'
 
-const Li = ({ body, customStyle }) => {
-  const cssCustom = customStyle || ''
 
-  return (
-    <li
-      className={
-        `transition-all hover:text-emerald-300 cursor-pointer  ` + cssCustom
-      }
-    >
-      {body}
-    </li>
-  )
-}
+import { Button } from '../html/button'
+import { Li } from '../html/li'
 
-const Button = ({ body }) => {
-  return <button>{body}</button>
-}
+
 
 export const Header = () => {
   return (
@@ -41,30 +29,24 @@ export const Header = () => {
 
           <nav className="transition-all hidden lg:flex ">
             <ul className="flex gap-5 text-sm font-mono tracking-tighter">
+
               <Li
                 body={`< Home />`}
                 customStyle={'text-base text-emerald-500 font-bold'}
               />
+
               <Li body="Stacks" />
               <Li body="Projetos" />
               <Li body="Blog" />
+
             </ul>
           </nav>
 
           <div className="transition-all w-60 justify-around hidden lg:flex gap-2">
-            <button className="transition-all flex items-center h-full gap-2 border py-2 px-4 rounded-2xl  border-zinc-300 opacity-60 hover:opacity-100">
-              <div className="w-6 h-6 ">
-                <GitHubLogo />
-              </div>
-              GitHub
-            </button>
 
-            <button className="transition-all flex items-center h-full gap-2 border py-2 px-4 rounded-2xl  border-zinc-300 opacity-60 hover:opacity-100">
-              <div className="w-6 h-6">
-                <Arroba />
-              </div>
-              Contato
-            </button>
+            <Button icon={<GitHubLogo/>} body='GitHub'  />
+            <Button icon={<Arroba />} body='Contato' />
+
           </div>
         </div>
       </div>
