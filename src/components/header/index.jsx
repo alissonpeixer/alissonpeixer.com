@@ -1,69 +1,73 @@
+import { GitHubLogo } from '../assets/GitHubLogo'
+import { Arroba } from '../assets/Arroba'
+
+const Li = ({ body, customStyle }) => {
+  const cssCustom = customStyle || ''
+
+  return (
+    <li
+      className={
+        `transition-all hover:text-emerald-300 cursor-pointer  ` + cssCustom
+      }
+    >
+      {body}
+    </li>
+  )
+}
+
+const Button = ({ body }) => {
+  return <button>{body}</button>
+}
+
 export const Header = () => {
-    return (
-        <header className="mx-auto container">
-            <div className="h-16 flex justify-between items-center p-8">
+  return (
+    <header className="flex w-full border-b border-emerald-500/[0.1] fixed z-50 bg-grad">
+      <div className="mx-auto container  fade_class_header  ">
+        <div className="h-16 flex justify-between items-center p-8 ">
+          <div className="transition-all text-center lg:w-60 lg:text-start ">
+            <h1 className="text-2xl">Alisson Peixer</h1>
+          </div>
 
+          <div className="transition-all flex  lg:hidden">
+            <svg width="18" height="12" viewBox="0 0 18 12" fill="none">
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M0 0.75C0 0.335786 0.335786 0 0.75 0H17.25C17.6642 0 18 0.335786 18 0.75C18 1.16421 17.6642 1.5 17.25 1.5H0.75C0.335786 1.5 0 1.16421 0 0.75ZM0 6C0 5.58579 0.335786 5.25 0.75 5.25H17.25C17.6642 5.25 18 5.58579 18 6C18 6.41421 17.6642 6.75 17.25 6.75H0.75C0.335786 6.75 0 6.41421 0 6ZM0 11.25C0 10.8358 0.335786 10.5 0.75 10.5H9C9.41421 10.5 9.75 10.8358 9.75 11.25C9.75 11.6642 9.41421 12 9 12H0.75C0.335786 12 0 11.6642 0 11.25Z"
+                fill="white"
+              />
+            </svg>
+          </div>
 
-                <div className="text-center lg:w-60 ">
-                    <h1 className="text-2xl">Alisson Peixer</h1>
-                </div>
+          <nav className="transition-all hidden lg:flex ">
+            <ul className="flex gap-5 text-sm font-mono tracking-tighter">
+              <Li
+                body={`< Home />`}
+                customStyle={'text-base text-emerald-500 font-bold'}
+              />
+              <Li body="Stacks" />
+              <Li body="Projetos" />
+              <Li body="Blog" />
+            </ul>
+          </nav>
 
-                <div className="flex lg:hidden">
-                    <svg width="18" height="12" viewBox="0 0 18 12" fill="none">
-                        <path fill-rule="evenodd" clip-rule="evenodd" d="M0 0.75C0 0.335786 0.335786 0 0.75 0H17.25C17.6642 0 18 0.335786 18 0.75C18 1.16421 17.6642 1.5 17.25 1.5H0.75C0.335786 1.5 0 1.16421 0 0.75ZM0 6C0 5.58579 0.335786 5.25 0.75 5.25H17.25C17.6642 5.25 18 5.58579 18 6C18 6.41421 17.6642 6.75 17.25 6.75H0.75C0.335786 6.75 0 6.41421 0 6ZM0 11.25C0 10.8358 0.335786 10.5 0.75 10.5H9C9.41421 10.5 9.75 10.8358 9.75 11.25C9.75 11.6642 9.41421 12 9 12H0.75C0.335786 12 0 11.6642 0 11.25Z" fill="white" />
-                    </svg>
+          <div className="transition-all w-60 justify-around hidden lg:flex gap-2">
+            <button className="transition-all flex items-center h-full gap-2 border py-2 px-4 rounded-2xl  border-zinc-300 opacity-60 hover:opacity-100">
+              <div className="w-6 h-6 ">
+                <GitHubLogo />
+              </div>
+              GitHub
+            </button>
 
-                </div>
-
-                <nav className="hidden lg:flex">
-                    <ul className="flex gap-5 text-sm font-mono tracking-tighter">
-
-                        <li className="text-base text-cyan-200 font-bold">{`< Home />`}</li>
-
-                        <li>Stacks</li>
-                        <li>Projetos</li>
-                        <li>Blog</li>
-                    </ul>
-                </nav>
-
-                <div className="w-60   justify-around hidden lg:flex">
-
-                    <button className="flex items-center h-full gap-2 ">
-                        <div className="w-6 h-6 ">
-                            <svg width="24" height="22" viewBox="0 0 24 22" fill="none" className="drop-shadow-xl">
-                                <path fill-rule="evenodd" clip-rule="evenodd" d="M11.75 0C5.39625 0 0.25 5.04701 0.25 11.2782C0.25 16.2688 3.54187 20.4841 8.11312 21.9785C8.68812 22.0771 8.90375 21.7388 8.90375 21.4427C8.90375 21.1749 8.88938 20.2867 8.88938 19.3422C6 19.8638 5.2525 18.6514 5.0225 18.017C4.89313 17.6927 4.3325 16.6918 3.84375 16.4239C3.44125 16.2125 2.86625 15.6908 3.82938 15.6767C4.735 15.6626 5.38188 16.4944 5.5975 16.8328C6.6325 18.5386 8.28563 18.0593 8.94688 17.7632C9.0475 17.0301 9.34938 16.5367 9.68 16.2548C7.12125 15.9728 4.4475 15 4.4475 10.6861C4.4475 9.45962 4.89312 8.44458 5.62625 7.6551C5.51125 7.37314 5.10875 6.21712 5.74125 4.66637C5.74125 4.66637 6.70438 4.37032 8.90375 5.82239C9.82375 5.56863 10.8013 5.44175 11.7788 5.44175C12.7563 5.44175 13.7338 5.56863 14.6538 5.82239C16.8531 4.35622 17.8162 4.66637 17.8162 4.66637C18.4487 6.21712 18.0462 7.37314 17.9312 7.6551C18.6644 8.44458 19.11 9.44552 19.11 10.6861C19.11 15.0141 16.4219 15.9728 13.8631 16.2548C14.28 16.6072 14.6394 17.2839 14.6394 18.3412C14.6394 19.8497 14.625 21.0621 14.625 21.4427C14.625 21.7388 14.8406 22.0912 15.4156 21.9785C19.9581 20.4841 23.25 16.2548 23.25 11.2782C23.25 5.04701 18.1038 0 11.75 0Z" fill="url(#paint0_linear_206_6)" />
-                                <defs>
-                                    <linearGradient id="paint0_linear_206_6" x1="11.75" y1="-7.78924e-09" x2="12" y2="31" gradientUnits="userSpaceOnUse">
-                                        <stop stop-color="white" />
-                                        <stop offset="1" stop-color="white" stop-opacity="0" />
-                                    </linearGradient>
-                                </defs>
-                            </svg>
-
-
-                        </div>
-                        GitHub
-                    </button>
-
-
-
-                    <button className="flex items-center h-full gap-2 ">
-                        <div>
-                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" >
-                                <path fill-rule="evenodd" clip-rule="evenodd" d="M15.834 4.166C14.6802 3.01232 13.2102 2.22669 11.6098 1.90845C10.0095 1.5902 8.35079 1.75364 6.84336 2.37809C5.33593 3.00255 4.04752 4.05997 3.14104 5.41665C2.23457 6.77334 1.75074 8.36835 1.75074 10C1.75074 11.6317 2.23457 13.2267 3.14104 14.5833C4.04752 15.94 5.33593 16.9975 6.84336 17.6219C8.35079 18.2464 10.0095 18.4098 11.6098 18.0916C13.2102 17.7733 14.6802 16.9877 15.834 15.834C15.9762 15.7015 16.1642 15.6294 16.3585 15.6328C16.5528 15.6363 16.7382 15.715 16.8756 15.8524C17.013 15.9898 17.0917 16.1752 17.0952 16.3695C17.0986 16.5638 17.0265 16.7518 16.894 16.894C13.087 20.702 6.914 20.702 3.106 16.894C-0.702 13.087 -0.702 6.914 3.106 3.106C6.913 -0.702 13.086 -0.702 16.894 3.106C17.8006 4.01039 18.5197 5.08499 19.0098 6.26807C19.4999 7.45116 19.7515 8.71941 19.75 10C19.75 10.975 19.454 11.887 18.941 12.571C18.427 13.256 17.661 13.75 16.75 13.75C15.846 13.75 15.084 13.263 14.57 12.586C14.0278 13.5444 13.1979 14.3081 12.1978 14.7689C11.1978 15.2298 10.0781 15.3645 8.99721 15.1541C7.91634 14.9436 6.92901 14.3986 6.1749 13.5962C5.42079 12.7938 4.93809 11.7746 4.79506 10.6827C4.65204 9.59088 4.85596 8.48171 5.37795 7.51214C5.89995 6.54256 6.7136 5.76166 7.70379 5.27991C8.69398 4.79817 9.81059 4.63997 10.8956 4.8277C11.9807 5.01543 12.9792 5.53958 13.75 6.326V6.25C13.75 6.05109 13.829 5.86032 13.9697 5.71967C14.1103 5.57902 14.3011 5.5 14.5 5.5C14.6989 5.5 14.8897 5.57902 15.0303 5.71967C15.171 5.86032 15.25 6.05109 15.25 6.25V10C15.25 10.682 15.458 11.27 15.759 11.671C16.059 12.072 16.418 12.25 16.75 12.25C17.082 12.25 17.44 12.072 17.741 11.671C18.041 11.271 18.25 10.681 18.25 10C18.2516 8.91633 18.039 7.84303 17.6244 6.84182C17.2098 5.84061 16.6013 4.93124 15.834 4.166ZM13.75 10C13.75 9.00544 13.3549 8.05161 12.6517 7.34835C11.9484 6.64509 10.9946 6.25 10 6.25C9.00544 6.25 8.05161 6.64509 7.34835 7.34835C6.64509 8.05161 6.25 9.00544 6.25 10C6.25 10.9946 6.64509 11.9484 7.34835 12.6517C8.05161 13.3549 9.00544 13.75 10 13.75C10.9946 13.75 11.9484 13.3549 12.6517 12.6517C13.3549 11.9484 13.75 10.9946 13.75 10Z" fill="url(#paint0_linear_214_58)" />
-                                <defs>
-                                    <linearGradient id="paint0_linear_214_58" x1="10" y1="0.25" x2="10" y2="29.5" gradientUnits="userSpaceOnUse">
-                                        <stop stop-color="white" />
-                                        <stop offset="1" stop-color="white" stop-opacity="0" />
-                                    </linearGradient>
-                                </defs>
-                            </svg>
-
-                        </div>
-                        Contato
-                    </button>
-                </div>
-            </div>
-        </header>
-    )
+            <button className="transition-all flex items-center h-full gap-2 border py-2 px-4 rounded-2xl  border-zinc-300 opacity-60 hover:opacity-100">
+              <div className="w-6 h-6">
+                <Arroba />
+              </div>
+              Contato
+            </button>
+          </div>
+        </div>
+      </div>
+    </header>
+  )
 }

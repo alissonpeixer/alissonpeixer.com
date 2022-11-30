@@ -2,9 +2,9 @@ import myPicture from '../../../public/mypicture.png'
 
 export const Home = () => {
     return (
-        <section className="bg-grip-particle bg-right bg-no-repeat">
+        <section className="bg-grip-particle bg-right bg-no-repeat snap-center">
 
-            <main className="transition-all lg:container lg:mx-auto min-h-[90vh]   items-center  flex flex-col lg:flex-row">
+            <main className="transition-all lg:container lg:mx-auto min-h-[90vh]   items-center  flex flex-col lg:flex-row fade_class">
 
 
 
@@ -23,7 +23,7 @@ export const Home = () => {
 
                     <div>
                         <h1 className="text-4xl lg:text-5xl font-bold text-shadow-xl">
-                            Me proponha um desafio
+                            Me proponha um desafio,
                         </h1>
                         <h2 className="text-2xl lg:text-3xl">
                             que le darei a solução!
