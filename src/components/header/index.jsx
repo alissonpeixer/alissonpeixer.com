@@ -29,24 +29,20 @@ export const Header = () => {
 
           <nav className="transition-all hidden lg:flex ">
             <ul className="flex gap-5 text-sm font-mono tracking-tighter">
-
               <Li
                 body={`< Home />`}
                 customStyle={'text-base text-emerald-500 font-bold'}
               />
-
-              <Li body="Stacks" />
+              <Li body="Bio" href="#bio" />
+              <Li body="Stacks" href="#stacks" />
               <Li body="Projetos" />
               <Li body="Blog" />
-
             </ul>
           </nav>
 
           <div className="transition-all w-60 justify-around hidden lg:flex gap-2">
-
-            <Button icon={<GitHubLogo/>} body='GitHub'  />
-            <Button icon={<Arroba />} body='Contato' />
-
+            <Button icon={<GitHubLogo />} body="GitHub" />
+            <Button icon={<Arroba />} body="Contato" />
           </div>
         </div>
       </div>
