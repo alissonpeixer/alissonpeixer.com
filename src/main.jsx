@@ -11,7 +11,7 @@ import { Bio } from './pages/bio'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <div className="h-screen bg-grad snap-y snap-mandatory overflow-y-scroll">
+    <div className="h-screen bg-grad snap-y snap-mandatory overflow-y-scroll flex flex-col">
       <Header />
 
       <Home />

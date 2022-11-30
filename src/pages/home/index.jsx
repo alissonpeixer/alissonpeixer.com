@@ -3,7 +3,7 @@ import myPicture from './assets/mypicture.png'
 export const Home = () => {
   return (
     <section
-      className="bg-grip-particle bg-right bg-no-repeat  bg-fixed shadow-2xl  h-screen snap-start"
+      className="bg-grip-particle bg-right pt-20 bg-no-repeat  bg-fixed   h-screen snap-start"
       id="home"
     >
       <main className="transition-all lg:container lg:mx-auto  min-h-[90vh]  items-center  flex flex-col lg:flex-row fade_class">
@@ -27,7 +27,7 @@ export const Home = () => {
         <div className="flex-1 flex items-center justify-center">
           <div>
             <img
-              className="w-80  min-w-[320px] max-w-[400px]  drop-shadow-2xl"
+              className="lg:w-80  w-56  max-w-[400px]  drop-shadow-2xl"
               src={myPicture}
               alt=""
             />

@@ -16,11 +16,11 @@ const stacks = [
 export const Stacks = () => {
   return (
     <section
-      className="bg-grip-particle bg-right bg-no-repeat  bg-fixed shadow-2xl  h-screen snap-start fade_class_header"
+      className="bg-grip-particle bg-right bg-no-repeat bg-fixed snap-start min-h-screen flex items-center px-12 fade_class_header"
       id="stacks"
     >
-      <main className="transition-all lg:container lg:mx-auto  min-h-[90vh]  items-center  flex flex-col lg:flex-row fade_class">
-        <div className="w-1/2  gap-5 text-center flex flex-col justify-center lg:text-start lg:pl-9">
+      <main className="transition-all lg:container lg:mx-auto  items-center  flex flex-col lg:flex-row fade_class">
+        <div className="  gap-5 text-center flex flex-col justify-center lg:text-start lg:w-1/2 lg:pl-9">
           {/* <div className=" flex items-center justify-center h-12 lg:justify-start lg:w-1/2">
             <div className="rounded-xl h-1/2 px-3 bg-radind  text-center">
               <h4 className=" text-black text-shadow-lg">Stacks</h4>
@@ -40,7 +40,7 @@ export const Stacks = () => {
           </div>
         </div>
 
-        <div className="flex-1 flex items-center  gap-3 flex-wrap">
+        <div className="flex-1 flex pt-8 pb-8 items-center justify-center lg:justify-end  gap-3 flex-wrap">
           {stacks.map((stack) => (
             <ContainerStack body={stack} />
           ))}
