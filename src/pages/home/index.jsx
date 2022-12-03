@@ -1,11 +1,10 @@
 import myPicture from './assets/mypicture.png'
 
+import { Section } from '../../components/html/section'
+
 export const Home = () => {
   return (
-    <section
-      className="bg-grip-particle bg-right pt-20 bg-no-repeat  bg-fixed   h-screen snap-start"
-      id="home"
-    >
+    <Section>
       <main className="transition-all lg:container lg:mx-auto  min-h-[90vh]  items-center  flex flex-col lg:flex-row fade_class">
         <div className="w-1/2  gap-9 text-center flex flex-col justify-center lg:text-start lg:pl-9">
           <div className=" flex items-center justify-center h-12 lg:justify-start lg:w-1/2">
@@ -34,6 +33,6 @@ export const Home = () => {
           </div>
         </div>
       </main>
-    </section>
+    </Section>
   )
 }

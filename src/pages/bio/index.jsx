@@ -1,10 +1,12 @@
 import { ProfileInlus } from './assets/profileInlus'
 
+
 export const Bio = () => {
   return (
     <section
       className="snap-start min-h-screen flex items-center px-12 shadow-2xl "
       id="bio"
+      name="bio"
     >
       <main className="transition-all lg:container lg:mx-auto h-1/2   items-center  flex flex-col lg:flex-row fade_class">
         <div className="flex-1 hidden lg:flex items-center justify-center ">

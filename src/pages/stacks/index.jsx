@@ -1,5 +1,5 @@
 import { ContainerStack } from '../../components/html/stackContainer'
-
+import { Section } from '../../components/html/section'
 const stacks = [
   'HTML5',
   'CSS3',
@@ -42,7 +42,7 @@ export const Stacks = () => {
 
         <div className="flex-1 flex pt-8 pb-8 items-center justify-center lg:justify-end  gap-3 flex-wrap">
           {stacks.map((stack) => (
-            <ContainerStack body={stack} />
+            <ContainerStack body={stack} key={stack.toString()} />
           ))}
         </div>
       </main>
