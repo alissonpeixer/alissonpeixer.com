@@ -4,7 +4,7 @@ import { Section } from '../../components/html/section'
 
 export const Home = () => {
   return (
-    <Section>
+    <Section id="home">
       <main className="transition-all lg:container lg:mx-auto  min-h-[90vh]  items-center  flex flex-col lg:flex-row fade_class">
         <div className="w-1/2  gap-9 text-center flex flex-col justify-center lg:text-start lg:pl-9">
           <div className=" flex items-center justify-center h-12 lg:justify-start lg:w-1/2">
