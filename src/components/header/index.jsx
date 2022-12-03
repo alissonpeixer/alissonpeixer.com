@@ -47,7 +47,7 @@ export const Header = () => {
               icon={<Arroba />}
               body="Contato"
               target="_blank"
-              href="mailto: alissonpeixer4@gmail.com"
+              href="mailto:alissonpeixer4@gmail.com"
             />
           </div>
         </div>
