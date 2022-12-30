@@ -1,12 +1,17 @@
-import { GitHubLogo } from '../assets/GitHubLogo'
-import { Arroba } from '../assets/Arroba'
+import { GitHubLogo } from './github'
+import { Arroba } from './arroba'
+import { useRouter } from 'next/router'
+import { useEffect, useState } from 'react'
+import { Li } from '../Li'
+import { Button } from '../Button'
 
-
-import { Button } from '../html/button'
-import { Li } from '../html/li'
-import { useState } from 'react'
+import ScrollspyNav from 'react-scrollspy-nav'
 
 export const Header = () => {
+  const router = useRouter()
+  useEffect(() => {
+    console.log(router)
+  }, [router])
   return (
     <header className="flex w-full border-b border-emerald-500/[0.1] fixed z-50 bg-grad">
       <div className="mx-auto container  fade_class_header  ">
@@ -26,13 +31,13 @@ export const Header = () => {
             </svg>
           </div>
 
-          <nav className="transition-all hidden lg:flex ">
+          <nav>
             <ul className="flex gap-5 text-sm font-mono tracking-tighter">
-              <Li href="#home" body="Home" />
+              <Li body="Home" href="#home" />
               <Li body="Bio" href="#bio" />
               <Li body="Stacks" href="#stacks" />
-              <Li body="Projetos" />
-              <Li body="Blog" />
+              <Li body="Projetos" href="#" />
+              <Li body="Blog" href="#" ocClick={() => console.log('salve')} />
             </ul>
           </nav>
 
