@@ -31,7 +31,7 @@ export const Header = ({ children }: any) => {
             </div>
 
             <div className="transition-all flex  lg:hidden">
-              <button onClick={() => navMobile(true)}>
+              <button onClick={() => navMobile()}>
                 <svg width="28" height="22" viewBox="0 0 18 12">
                   <path
                     fillRule="evenodd"
@@ -80,7 +80,7 @@ export const Header = ({ children }: any) => {
         }
       >
         <div className="w-full flex justify-end">
-          <button onClick={() => navMobile(false)}>
+          <button onClick={() => navMobile()}>
             <svg
               fill="none"
               viewBox="0 0 24 24"
@@ -96,14 +96,11 @@ export const Header = ({ children }: any) => {
           </button>
         </div>
         <ul className="flex flex-col gap-5 text-2xl font-mono tracking-tighter text-center">
-          <Li body="Home" onClick={() => (goTo('home'), navMobile(false))} />
-          <Li body="Bio" onClick={() => (goTo('bio'), navMobile(false))} />
-          <Li body="Stacks" onClick={() => (goTo('stack'), navMobile(false))} />
-          <Li
-            body="Projetos"
-            onClick={() => (goTo('project'), navMobile(false))}
-          />
-          <Li body="Blog" onClick={() => (goTo('blog'), navMobile(false))} />
+          <Li body="Home" onClick={() => (goTo('home'), navMobile())} />
+          <Li body="Bio" onClick={() => (goTo('bio'), navMobile())} />
+          <Li body="Stacks" onClick={() => (goTo('stack'), navMobile())} />
+          <Li body="Projetos" onClick={() => (goTo('project'), navMobile())} />
+          <Li body="Blog" onClick={() => (goTo('blog'), navMobile())} />
         </ul>
         <div className="transition-all items-center justify-around  flex gap-2 ">
           <Button
