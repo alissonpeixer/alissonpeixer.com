@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import { useEffect, useState } from 'react'
 import texts from '../../config/texts.json' assert { type: 'json' }
 
@@ -26,10 +27,12 @@ export const Home = () => {
 
         <div className="xl:flex-1 flex items-center justify-center">
           <div className="h-96 flex items-center">
-            <img
-              className="lg:w-96  w-80  max-w-[400px]  drop-shadow-2xl"
-              src={text?.picUrl}
-              alt={text?.picAlt}
+            <Image
+              width={320}
+              height={160}
+              className="lg:w-96  max-w-[400px]  drop-shadow-2xl"
+              src={text?.picUrl || ''}
+              alt={text?.picAlt || ''}
             />
           </div>
         </div>
