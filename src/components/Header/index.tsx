@@ -4,16 +4,15 @@ import { useRouter } from 'next/router'
 import { useEffect, useState } from 'react'
 import { Li } from '../Li'
 import { Button } from '../Button'
-
 import ScrollspyNav from 'react-scrollspy-nav'
-
-export const Header = () => {
-  const router = useRouter()
-  useEffect(() => {
-    console.log(router)
-  }, [router])
+export const Header = ({ setScroll }: any) => {
+  const goTo = (id: string) => {
+    document
+      .getElementById(id)
+      ?.scrollIntoView({ behavior: 'smooth', block: 'end', inline: 'nearest' })
+  }
   return (
-    <header className="flex w-full border-b border-emerald-500/[0.1] fixed z-50 bg-grad">
+    <header className="flex w-full border-b border-emerald-500/[0.1] z-50 bg-grad fixed">
       <div className="mx-auto container  fade_class_header  ">
         <div className="h-16 flex justify-between items-center p-8 ">
           <div className="transition-all text-center lg:w-60 lg:text-start ">
@@ -33,11 +32,11 @@ export const Header = () => {
 
           <nav>
             <ul className="flex gap-5 text-sm font-mono tracking-tighter">
-              <Li body="Home" href="#home" />
-              <Li body="Bio" href="#bio" />
-              <Li body="Stacks" href="#stacks" />
-              <Li body="Projetos" href="#" />
-              <Li body="Blog" href="#" ocClick={() => console.log('salve')} />
+              <Li body="Home" onClick={() => goTo('home')} />
+              <Li body="Bio" onClick={() => goTo('bio')} />
+              <Li body="Stacks" onClick={() => goTo('stack')} />
+              <Li body="Projetos" onClick={() => goTo('project')} />
+              <Li body="Blog" onClick={() => goTo()} />
             </ul>
           </nav>
 

@@ -1,18 +1,15 @@
-import Link from 'next/link'
+import Link, { LinkProps } from 'next/link'
 import * as React from 'react'
-
-interface liPorps {
+import { NavLink, NavLinkProps } from 'react-router-dom'
+interface Porps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   body: string
   customStyle?: string
-  href: string
 }
 
-export const Li = ({ body, customStyle, href, ...pres }: liPorps) => {
+export const Li = ({ body, customStyle, ...pres }: Porps) => {
   return (
     <li className={`transition-all hover:text-emerald-300 cursor-pointer `}>
-      <Link href={href} {...pres}>
-        {body}
-      </Link>
+      <button {...pres}>{body}</button>
     </li>
   )
 }

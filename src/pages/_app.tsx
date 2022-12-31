@@ -7,7 +7,6 @@ const inter = Inter({
   subsets: ['latin'],
 })
 export default function App({ Component, pageProps }: AppProps) {
-  console.log(Component)
   return (
     <div className={`${inter.className} bg-grad`}>
       <ChakraProvider>

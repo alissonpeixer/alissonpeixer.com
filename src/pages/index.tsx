@@ -1,15 +1,10 @@
 import Head from 'next/head'
-import Image from 'next/image'
-import { Inter } from '@next/font/google'
-
-const inter = Inter({ subsets: ['latin'] })
-
-import { ProfileInlus } from '../assets/profileInlus'
-
-import myPicture from '../assets/mypicture.png'
 import { Header } from '../components/Header'
+import { Home } from '../components/Sections/Home'
+import { Bio } from '../components/Sections/Bio'
+import { Stacks } from '../components/Sections/Stacks'
 
-export default function Home() {
+export default function App() {
   return (
     <>
       <Head>
@@ -20,75 +15,9 @@ export default function Home() {
       </Head>
       <main className="mx-auto snap-y snap-mandatory h-screen  overflow-y-scroll">
         <Header />
-
-        <section
-          id="home"
-          className="h-screen  fade_class bg-grip-particle bg-right-top bg-no-repeat pt-10 shadow-2xl snap-center"
-        >
-          <div className="transition-all gap-3 lg:container lg:mx-auto  min-h-[90vh]  items-center  justify-center flex flex-col lg:flex-row fade_class">
-            <div className="xl:w-1/2  gap-9 text-center flex flex-col justify-center  lg:text-start lg:pl-9 h-full">
-              <div className=" flex items-center justify-center h-12 lg:justify-start lg:w-1/2">
-                <div className="rounded-xl h-1/2 px-3 bg-radind  text-center">
-                  <h4 className=" text-black text-shadow-lg">
-                    Desenvolvedor Full Stack
-                  </h4>
-                </div>
-              </div>
-
-              <div>
-                <h1 className="text-4xl lg:text-5xl font-bold text-shadow-xl">
-                  Me proponha um desafio,
-                </h1>
-                <h2 className="text-2xl lg:text-3xl">
-                  que le darei a solução!
-                </h2>
-              </div>
-            </div>
-
-            <div className="xl:flex-1 flex items-center justify-center">
-              <div className="h-96 flex items-center">
-                <img
-                  className="lg:w-96  w-80  max-w-[400px]  drop-shadow-2xl"
-                  src="/mypicture.png"
-                  alt=""
-                />
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <section
-          className="snap-center  min-h-screen flex items-center px-12 shadow-2xl "
-          id="bio"
-        >
-          <main className="transition-all lg:container lg:mx-auto h-1/2   items-center  flex flex-col lg:flex-row fade_class">
-            <div className="flex-1 hidden lg:flex items-center justify-center ">
-              <ProfileInlus />
-            </div>
-            <div className="  gap-9 text-center flex flex-col justify-center lg:text-start lg:pl-9 lg:w-1/2">
-              <div className=" flex items-center justify-center h-16 lg:justify-start lg:w-1/2">
-                <div className="rounded-xl  px-3 py-2 bg-radind  text-center">
-                  <h4 className=" text-black text-xl text-shadow-lg">
-                    Sobre mim
-                  </h4>
-                </div>
-              </div>
-
-              <div className="text-start">
-                <h1 className="text-3xl lg:text-5xl font-bold text-shadow-xl">
-                  Olá, me chamo Alisson,
-                </h1>
-                <p className=" lg:text-lg">
-                  busco sempre estar evoluindo com muita dedicação! Todo o
-                  conhecimento que tenho adquirido até hoje foi por base do meu
-                  autodidatismo e minha fascinação de sempre querer aprender
-                  mais! Estou na área de desenvolvimento web há 1 ano, mas tenho
-                  contato com o mundo da tecnologia desde os meus 11 anos.
-                </p>
-              </div>
-            </div>
-          </main>
-        </section>
+        <Home />
+        <Bio />
+        <Stacks />
       </main>
     </>
   )

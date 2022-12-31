@@ -1,0 +1,37 @@
+[
+  {
+    "home": {
+      "slack": "Desenvolvedor Full Stack",
+      "h1": " Me proponha um desafio",
+      "h2": "que le darei a solução!",
+      "picUrl": "/mypicture.png",
+      "picAlt": "Foto de Alisson Peixer sorrindo!"
+    }
+  },
+  {
+    "bio": {
+      "h4": "Sobre mim",
+      "h1": "Olá, me chamo Alisson,",
+      "p": "busco sempre estar evoluindo com muitaz dedicação! Todo oconhecimento que tenho adquirido até hoje foi por base do meuautodidatismo e minha fascinação de sempre querer aprender mais!Estou na área de desenvolvimento web há 1 ano, mas tenho contatocom o mundo da tecnologia desde os meus 11 anos."
+    }
+  },
+  {
+    "stack": {
+      "h4": "Stacks",
+      "h1": "Algumas das stacks que tenho conhecimento",
+      "h2": "ou que já usei.",
+      "listStacks": {
+        "1": "HTML5",
+        "2": "CSS3",
+        "3": "JavaScript",
+        "4": "TypeScript",
+        "5": "Python",
+        "6": "NodeJS",
+        "7": "React",
+        "8": "React Native",
+        "9": "Prisma",
+        "10": "SQLite"
+      }
+    }
+  }
+]
