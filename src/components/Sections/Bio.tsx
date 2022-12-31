@@ -1,5 +1,5 @@
 import { ProfileInlus } from './assets/profileInlus'
-import texts from '../../texts/texts.json' assert { type: 'json' }
+import texts from '../../config/texts.json' assert { type: 'json' }
 import { useState } from 'react'
 export const Bio = () => {
   const [text, setText] = useState(texts[1].bio)
