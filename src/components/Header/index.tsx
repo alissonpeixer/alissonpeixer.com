@@ -36,7 +36,7 @@ export const Header = ({ setScroll }: any) => {
               <Li body="Bio" onClick={() => goTo('bio')} />
               <Li body="Stacks" onClick={() => goTo('stack')} />
               <Li body="Projetos" onClick={() => goTo('project')} />
-              <Li body="Blog" onClick={() => goTo()} />
+              <Li body="Blog" onClick={() => goTo('blog')} />
             </ul>
           </nav>
 
