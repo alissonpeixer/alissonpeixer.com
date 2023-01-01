@@ -4,13 +4,21 @@ import { useRouter } from 'next/router'
 import { useEffect, useState } from 'react'
 import { Li } from '../Li'
 import { Button } from '../Button'
-import ScrollspyNav from 'react-scrollspy-nav'
+
 export const Header = ({ children }: any) => {
+  const router = useRouter()
+
   const [menuOpen, setMenuOpen] = useState(false)
-  const goTo = (id: string) => {
-    document
-      .getElementById(id)
-      ?.scrollIntoView({ behavior: 'smooth', block: 'end', inline: 'nearest' })
+
+  const goTo = async (id: string) => {
+    if (router.pathname === '/blog') {
+      await router.push('/')
+    }
+    document.getElementById(id)?.scrollIntoView({
+      behavior: 'smooth',
+      block: 'end',
+      inline: 'nearest',
+    })
   }
 
   const navMobile = () => {
@@ -23,7 +31,7 @@ export const Header = ({ children }: any) => {
 
   return (
     <>
-      <header className="flex w-full border-b border-emerald-500/[0.1] z-50 bg-grad fixed">
+      <header className="flex w-full border-b border-emerald-500/[0.1] z-50 backdrop-blur-xl bg-gray-800/10  fixed">
         <div className="mx-auto container  fade_class_header  ">
           <div className="h-16 flex justify-between items-center p-8 ">
             <div className="transition-all text-center lg:w-60 lg:text-start ">
@@ -50,7 +58,7 @@ export const Header = ({ children }: any) => {
                 <Li body="Bio" onClick={() => goTo('bio')} />
                 <Li body="Stacks" onClick={() => goTo('stack')} />
                 <Li body="Projetos" onClick={() => goTo('project')} />
-                <Li body="Blog" onClick={() => goTo('blog')} />
+                <Li body="Blog" onClick={() => router.push('/blog')} />
               </ul>
             </nav>
 
@@ -75,8 +83,8 @@ export const Header = ({ children }: any) => {
       <div
         className={
           menuOpen
-            ? 'transition-all  ease-in-out flex w-screen  h-screen backdrop-blur-xl bg-gray-800/10 absolute gap-10 z-50  p-10 flex-col justify-between lg:hidden'
-            : 'transition-all translate  ease-in-out  absolute -left-full lg:hidden '
+            ? 'transition-all  ease-in-out flex w-screen  h-screen backdrop-blur-xl bg-gray-800/10 absolute gap-10 z-50  p-20 flex-col justify-between lg:hidden'
+            : 'transition-all translate  ease-in-out  absolute -left-full lg:hidden'
         }
       >
         <div className="w-full flex justify-end">
@@ -95,12 +103,12 @@ export const Header = ({ children }: any) => {
             </svg>
           </button>
         </div>
-        <ul className="flex flex-col gap-5 text-2xl font-mono tracking-tighter text-center">
+        <ul className="flex flex-col gap-5 text-2xl font-mono tracking-wide text-center">
           <Li body="Home" onClick={() => (goTo('home'), navMobile())} />
           <Li body="Bio" onClick={() => (goTo('bio'), navMobile())} />
           <Li body="Stacks" onClick={() => (goTo('stack'), navMobile())} />
           <Li body="Projetos" onClick={() => (goTo('project'), navMobile())} />
-          <Li body="Blog" onClick={() => (goTo('blog'), navMobile())} />
+          <Li body="Blog" onClick={() => (router.push('/blog'), navMobile())} />
         </ul>
         <div className="transition-all items-center justify-around  flex gap-2 ">
           <Button
