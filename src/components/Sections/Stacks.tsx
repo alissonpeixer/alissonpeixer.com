@@ -19,7 +19,7 @@ export const Stacks = () => {
 
   return (
     <section
-      className="bg-grip-particle bg-right bg-no-repeat bg-fixed snap-start min-h-screen flex items-center px-12 fade_class_header"
+      className="bg-grip-particle bg-right bg-no-repeat  snap-start min-h-screen flex items-center px-12 fade_class_header backdrop-blur-xl  "
       id="stack"
     >
       <main className="transition-all lg:container lg:mx-auto  items-center  flex flex-col lg:flex-row fade_class">
