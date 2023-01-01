@@ -5,6 +5,7 @@ import { Spinner } from '@chakra-ui/react'
 type gitApi = {
   svn_url: string
   name: string
+  id: string
   topics: []
 }
 
@@ -71,7 +72,7 @@ export const Project = () => {
                   <a
                     className="text-black"
                     href={item.svn_url}
-                    key={id}
+                    key={item.id}
                     target="_blank"
                   >
                     {item.name}
