@@ -23,8 +23,6 @@ Stacks used<br>
 ###### screenshot this project
 ![image](https://user-images.githubusercontent.com/48291580/210161789-d9768962-f1be-42d4-a8a6-55eddaf100d4.png)
 ![image](https://user-images.githubusercontent.com/48291580/210161793-80a27dc0-fd0f-4ea9-8e93-7eadfca40563.png)
-![image](https://user-images.githubusercontent.com/48291580/210161814-27636778-e78b-4881-bac5-70bfad2e125d.png)
-
 
 ---
 
