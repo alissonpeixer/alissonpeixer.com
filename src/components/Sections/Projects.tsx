@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
-import { ContainerStack } from '../../components/Container/Stacks'
 import texts from '../../config/texts.json' assert { type: 'json' }
-import { Spinner } from '@chakra-ui/react'
+import Link from 'next/link'
+
 type gitApi = {
   svn_url: string
   name: string
@@ -68,15 +68,17 @@ export const Project = () => {
             </div>
             <div className="flex-1 flex pt-8 pb-8 items-center justify-center lg:justify-start  gap-3 flex-wrap">
               {projects?.data.map((item, id): any => (
-                <div className="transition-all rounded-xl h-1/2 px-3 bg-radind  text-center hover:scale-110">
-                  <a
+                <div
+                  className="transition-all rounded-xl h-1/2 px-3 bg-radind  text-center hover:scale-110"
+                  key={id}
+                >
+                  <Link
                     className="text-black"
                     href={item.svn_url}
-                    key={item.id}
                     target="_blank"
                   >
                     {item.name}
-                  </a>
+                  </Link>
                 </div>
               ))}
             </div>
