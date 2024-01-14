@@ -30,7 +30,7 @@ export const GitHub = () => {
 
   const fetchProject = async () => {
     setProjects(prevOld => ({ ...prevOld, loading: true }))
-    const res = await fetch('https://api.github.com/users/alissonpeixer/repos')
+    const res = await fetch('https://api.github.com/users/alissonpeixer/repos?direction=desc')
       .then(e => e.json())
       .then(data => {
         setProjects(prevOld => ({ ...prevOld, data }))
@@ -47,7 +47,7 @@ export const GitHub = () => {
           id="github"
           className="snap-start min-h-screen flex items-center px-12 fade_class_header "
         >
-          <div className="transition-all xl:container xl:mx-auto  items-center  flex flex-col xl:flex-row fade_class">
+          <div className="transition-all xl:container xl:mx-auto  items-center  flex flex-col xl:flex-row fade_class mt-14 mb-20 lg:m-0  ">
             <div className="gap-5 text-center flex flex-col justify-center xl:text-start xl:w-1/2 xl:pl-9">
               <Bagded label='GitHub' textSize='2xl'/>
               <div>
@@ -56,13 +56,14 @@ export const GitHub = () => {
                   GitHub
                 </h1>
                 <h2 className="text-1xl xl:text-3xl">
-                  veja algum desles aqui!
+                  veja alguns desles aqui:
                 </h2>
               </div>
             </div>
-            <div className="flex-1 flex pt-8 pb-8 items-center justify-center lg:justify-start  gap-3 flex-wrap max-h-[500px]">
+            <div className="flex-1 flex pt-8 pb-8 items-center justify-center lg:justify-start  gap-3 flex-wrap ">
               {projects?.data.map((item, id): any => (
-                <div
+                id <= 6 ? (
+                  <div
                   className="transition-all rounded-xl h-1/2 px-3 bg-radind  text-center hover:scale-110"
                   key={id}
                 >
@@ -74,6 +75,20 @@ export const GitHub = () => {
                     {item.name}
                   </Link>
                 </div>
+                ) : id === 7 && (
+                  <div
+                    className="transition-all rounded-xl h-1/2 px-3  text-center hover:scale-110 bg-emerald-200"
+                    key={id}
+                  >
+                    <Link
+                      className="text-black"
+                      href="https://github.com/alissonpeixer?tab=repositories"
+                      target="_blank"
+                    >
+                      Ver mais...
+                    </Link>
+                  </div>
+                )
               ))}
             </div>
           </div>

@@ -25,9 +25,9 @@ export const Project = () => {
   return (
     <section
       id="project"
-      className="snap-start min-h-screen flex items-center px-12 fade_class_header"
+      className="snap-start min-h-screen flex items-center px-12 fade_class_header "
     >
-      <div className="transition-all container xl:mx-auto  items-center  flex flex-col xl:flex-row fade_class">
+      <div className="transition-all container xl:mx-auto  items-center  flex flex-col xl:flex-row fade_class mt-28 lg:mt-0">
         <div className="mt-14  gap-5 text-center flex flex-col justify-center xl:text-start xl:w-1/2 xl:pl-9 xl:mt-0">
           <Bagded label='Projetos' textSize='xl'/>
           <div className='space-y-3'>

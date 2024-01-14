@@ -32,8 +32,8 @@ export const Header = ({ children }: any) => {
 
   return (
     <>
-      <header className="flex w-full border-b border-emerald-500/[0.1] z-50 backdrop-blur-xl bg-gray-800/10  fixed">
-        <div className="mx-auto container  fade_class_header  ">
+      <header className="flex w-full border-b border-emerald-500/[0.1] z-50 backdrop-blur-xl bg-gray-800/10 fixed ">
+        <div className="mx-auto container  fade_class_header">
           <div className="h-16 flex justify-between items-center p-8 ">
             <a href='' className="transition-all text-center lg:w-60 lg:text-start ">
               <Logos logo='alissonpeixerA' width='70' height='40' />
@@ -85,47 +85,51 @@ export const Header = ({ children }: any) => {
       <div
         className={
           menuOpen
-            ? 'transition-all  ease-in-out flex w-screen  h-screen backdrop-blur-xl bg-gray-800/10 absolute gap-10 z-50  p-20 flex-col justify-between lg:hidden'
-            : 'transition-all translate  ease-in-out  absolute -left-full lg:hidden'
+            ? 'transition-all  ease-in-out fixed inset-0 flex items-center  overlay backdrop-blur-xl bg-gray-800/10 gap-10 z-50 flex-col justify-between lg:hidden'
+            : 'transition-all translate  ease-in-out  overlay fixed -left-full lg:hidden'
         }
+
+
       >
-        <div className="w-full flex justify-end">
-          <button onClick={() => navMobile()}>
-            <svg
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-              className="transition-all w-10 h-10 hover:stroke-slate-50 stroke-slate-300"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="M9.75 9.75l4.5 4.5m0-4.5l-4.5 4.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
-              />
-            </svg>
-          </button>
-        </div>
-        <ul className="flex flex-col gap-5 text-2xl font-mono tracking-wide text-center">
-          <Li body="Home" onClick={() => (goTo('home'), navMobile())} />
-          <Li body="Bio" onClick={() => (goTo('bio'), navMobile())} />
-          <Li body="Stacks" onClick={() => (goTo('stack'), navMobile())} />
-          <Li body="Projetos" onClick={() => (goTo('project'), navMobile())} />
-          <Li body="GitHub" onClick={() =>( goTo('github'), navMobile())} />
-          {/* <Li disabled  body="Blog" onClick={() => (router.push('/blog'), navMobile())} /> */}
-        </ul>
-        <div className="transition-all items-center justify-around  flex gap-2 ">
-          <Button
-            icon={<GitHubLogo fill="white" />}
-            body="GitHub"
-            href="https://github.com/alissonpeixer"
-            target="_blank"
-          />
-          <Button
-            icon={<Arroba fill="white" />}
-            body="Contato"
-            target="_blank"
-            href="mailto:alissonpeixer4@gmail.com"
-          />
+        <div className='space-y-28'>
+          <div className="w-full flex justify-end p-5">
+            <button onClick={() => navMobile()}>
+              <svg
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                className="transition-all w-10 h-10 hover:stroke-slate-50 stroke-red-300"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M9.75 9.75l4.5 4.5m0-4.5l-4.5 4.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+                />
+              </svg>
+            </button>
+          </div>
+          <ul className="flex flex-col text-center gap-5 text-2xl font-light tracking-wide">
+            <Li body="Home" onClick={() => (goTo('home'), navMobile())} />
+            <Li body="Bio" onClick={() => (goTo('bio'), navMobile())} />
+            <Li body="Stacks" onClick={() => (goTo('stack'), navMobile())} />
+            <Li body="Projetos" onClick={() => (goTo('project'), navMobile())} />
+            <Li body="GitHub" onClick={() => (goTo('github'), navMobile())} />
+            {/* <Li disabled  body="Blog" onClick={() => (router.push('/blog'), navMobile())} /> */}
+          </ul>
+          <div className="transition-all items-center justify-around  flex gap-2 ">
+            <Button
+              icon={<GitHubLogo fill="white" />}
+              body="GitHub"
+              href="https://github.com/alissonpeixer"
+              target="_blank"
+            />
+            <Button
+              icon={<Arroba fill="white" />}
+              body="Contato"
+              target="_blank"
+              href="mailto:alissonpeixer4@gmail.com"
+            />
+          </div>
         </div>
       </div>
 
