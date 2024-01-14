@@ -4,6 +4,7 @@ import { useRouter } from 'next/router'
 import { useEffect, useState } from 'react'
 import { Li } from '../Li'
 import { Button } from '../Button'
+import { Logos } from '../Svg/Logos'
 
 export const Header = ({ children }: any) => {
   const router = useRouter()
@@ -34,9 +35,9 @@ export const Header = ({ children }: any) => {
       <header className="flex w-full border-b border-emerald-500/[0.1] z-50 backdrop-blur-xl bg-gray-800/10  fixed">
         <div className="mx-auto container  fade_class_header  ">
           <div className="h-16 flex justify-between items-center p-8 ">
-            <div className="transition-all text-center lg:w-60 lg:text-start ">
-              <h1 className="text-2xl">Alisson Peixer</h1>
-            </div>
+            <a href='' className="transition-all text-center lg:w-60 lg:text-start ">
+              <Logos logo='alissonpeixerA' width='70' height='40' />
+            </a>
 
             <div className="transition-all flex  lg:hidden">
               <button onClick={() => navMobile()}>
@@ -59,7 +60,7 @@ export const Header = ({ children }: any) => {
                 <Li body="Stacks" onClick={() => goTo('stack')} />
                 <Li body="Projetos" onClick={() => goTo('project')} />
                 <Li body="GitHub" onClick={() => goTo('github')} />
-                <Li body="Blog" onClick={() => router.push('/blog')} />
+                {/* <Li disabled body="Blog" onClick={() => router.push('/blog')} /> */}
               </ul>
             </nav>
 
@@ -110,7 +111,7 @@ export const Header = ({ children }: any) => {
           <Li body="Stacks" onClick={() => (goTo('stack'), navMobile())} />
           <Li body="Projetos" onClick={() => (goTo('project'), navMobile())} />
           <Li body="GitHub" onClick={() =>( goTo('github'), navMobile())} />
-          <Li body="Blog" onClick={() => (router.push('/blog'), navMobile())} />
+          {/* <Li disabled  body="Blog" onClick={() => (router.push('/blog'), navMobile())} /> */}
         </ul>
         <div className="transition-all items-center justify-around  flex gap-2 ">
           <Button

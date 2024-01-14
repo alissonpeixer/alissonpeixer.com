@@ -3,7 +3,7 @@ import { useState } from 'react'
 
 import { Bagded } from '../Bagded'
 import texts from '../../config/texts.json' assert { type: 'json' }
-import { Logos } from '../Svg/PrjetoTwitter'
+import { Logos } from '../Svg/Logos'
 
 type gitApi = {
   svn_url: string
