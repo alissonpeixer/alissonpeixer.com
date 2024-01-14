@@ -21,8 +21,10 @@ Stacks used<br>
 ## Good look! 😃
 
 ###### screenshot this project
-![image](https://user-images.githubusercontent.com/48291580/210161789-d9768962-f1be-42d4-a8a6-55eddaf100d4.png)
-![image](https://user-images.githubusercontent.com/48291580/210161793-80a27dc0-fd0f-4ea9-8e93-7eadfca40563.png)
+![image](https://github.com/alissonpeixer/alissonpeixer.github.io/assets/48291580/d3f1f705-e516-4f0c-9453-81a921ec7551)
+![image](https://github.com/alissonpeixer/alissonpeixer.github.io/assets/48291580/14dae007-b8af-4856-adc5-5a937ec1d07e)
+![image](https://github.com/alissonpeixer/alissonpeixer.github.io/assets/48291580/72daeded-92e4-48d1-a0ad-4b2381214f18)
+
 
 ---
 
