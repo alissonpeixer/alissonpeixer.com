@@ -2,7 +2,21 @@ import { ProfileInlus } from './assets/profileInlus'
 import texts from '../../config/texts.json' assert { type: 'json' }
 import { useState } from 'react'
 export const Bio = () => {
-  const [text, setText] = useState(texts[1].bio)
+  const [text, setText] = useState(texts[1].bio);
+
+  const fnGetYeats = (): string => {
+
+    const dataReferencia = new Date('2018-01-19');
+    const dataAtual = new Date();
+    const diferencaEmMilissegundos = (dataAtual.getTime() - dataReferencia.getTime());
+    const anosPassados = diferencaEmMilissegundos / (1000 * 60 * 60 * 24 * 365.25);
+
+
+    return anosPassados.toFixed(0);
+  }
+
+
+
   return (
     <section
       id="bio"
@@ -23,7 +37,7 @@ export const Bio = () => {
             <h1 className="text-3xl lg:text-5xl font-bold text-shadow-xl">
               {text?.h1}
             </h1>
-            <p className=" lg:text-lg">{text?.p}</p>
+            <p className=" lg:text-lg">{text?.p.replace("%YEARS%", fnGetYeats())}</p>
           </div>
         </div>
       </main>

@@ -12,7 +12,7 @@
     "bio": {
       "h4": "Sobre mim",
       "h1": "Olá, me chamo Alisson,",
-      "p": "busco sempre estar evoluindo com muitaz dedicação! Todo oconhecimento que tenho adquirido até hoje foi por base do meuautodidatismo e minha fascinação de sempre querer aprender mais!Estou na área de desenvolvimento web há 1 ano, mas tenho contatocom o mundo da tecnologia desde os meus 11 anos."
+      "p": "Estou sempre em busca de me aprimorar com muita dedicação! Todo o conhecimento que acumulei até hoje foi resultado do meu autodidatismo e da minha constante vontade de aprender mais. Já estou na área de desenvolvimento fullstack há mais de %YEARS% anos, mas minha paixão pela tecnologia começou a muito tempo!"
     }
   },
   {
@@ -33,5 +33,22 @@
         "10": "SQLite"
       }
     }
+  },
+  {
+    "projects":[
+      {
+        "satack":"FullStack - NextJS - ReactJS",
+        "name": "LiveChat",
+        "description": "Um sistema de chat, em tempo real, via túnel SocketId.",
+        "url": "https://chat.alissonpeixer.com/"
+      },
+      {
+        "satack": "FullStack - NuxtJS - VueJS",
+        "name": "Twitter",
+        "description": "Um simples clone fullstack do twitter.",
+         "url": "https://twitter.alissonpeixer.com/"
+
+      }
+    ]
   }
 ]

@@ -7,7 +7,7 @@ export const Home = () => {
   return (
     <section
       id="home"
-      className="h-screen  fade_class bg-grip-particle bg-right-top bg-no-repeat pt-10 shadow-2xl snap-start"
+      className="h-screen fade_class bg-grip-particle bg-right-top bg-no-repeat pt-10 shadow-2xl snap-start"
     >
       <div className="transition-all gap-3 lg:container lg:mx-auto  min-h-[90vh]  items-center  justify-center flex flex-col lg:flex-row fade_class">
         <div className="xl:w-1/2  gap-9 text-center flex flex-col justify-center  lg:text-start lg:pl-9 h-full">

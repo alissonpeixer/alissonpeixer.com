@@ -58,6 +58,7 @@ export const Header = ({ children }: any) => {
                 <Li body="Bio" onClick={() => goTo('bio')} />
                 <Li body="Stacks" onClick={() => goTo('stack')} />
                 <Li body="Projetos" onClick={() => goTo('project')} />
+                <Li body="GitHub" onClick={() => goTo('github')} />
                 <Li body="Blog" onClick={() => router.push('/blog')} />
               </ul>
             </nav>
@@ -108,6 +109,7 @@ export const Header = ({ children }: any) => {
           <Li body="Bio" onClick={() => (goTo('bio'), navMobile())} />
           <Li body="Stacks" onClick={() => (goTo('stack'), navMobile())} />
           <Li body="Projetos" onClick={() => (goTo('project'), navMobile())} />
+          <Li body="GitHub" onClick={() =>( goTo('github'), navMobile())} />
           <Li body="Blog" onClick={() => (router.push('/blog'), navMobile())} />
         </ul>
         <div className="transition-all items-center justify-around  flex gap-2 ">
