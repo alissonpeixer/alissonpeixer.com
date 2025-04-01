@@ -1,7 +1,7 @@
 "use client";
 import { motion } from "framer-motion";
 import { useState } from "react";
-import { Menu } from "lucide-react";
+import { Menu, Mail,Linkedin } from "lucide-react";
 import { ReactTyped } from "react-typed";
 import Image from "next/image";
 import { Badge } from "@/components/ui/badge";
@@ -23,9 +23,9 @@ export default function Home() {
   };
 
   return (
-    <main className={`h-screen bg-stone-900 text-white flex flex-col items-center p-5  ${menuOpen ? 'overflow-x-hidden' : 'overflow-x-scroll'}`}>
+    <main className={`h-screen bg-stone-900 text-white flex flex-col items-center p-5 overflow-x-hidden  ${menuOpen ? 'overflow-x-hidden' : 'overflow-x-scroll'}`}>
       {/* header */}
-      <header className="flex items-center justify-between p-4 bg-stone-800 fixed left-1/2 transform -translate-x-1/2 w-full container mx-auto rounded-2xl z-10 mt-2 bg-opacity-50 backdrop-blur-lg shadow-md">
+      <header className="flex items-center justify-between p-4 bg-stone-800 fixed fixedsform -t  tranranslate-x-1/2 w-full container mx-auto rounded-2xl z-10 mt-2 bg-opacity-50 backdrop-blur-lg shadow-md">
         <h1 className="text-2xl font-bold">
           <Image
             src="/logo-a.svg"
@@ -77,16 +77,17 @@ export default function Home() {
         
       )} */}
 
-      <nav className={`transition-all backdrop-blur-3xl opacity-30 text-center space-y-5 xl:hidden bg-stone-800 p-4 flex flex-col items-center justify-center   z-[100] w-[100%] rounded-4xl container top-28 fixed h-[80vh] transform ${menuOpen ? 'left-0 opacity-100' : 'left-[-500px] opacity-0'} ease-in-out`}>
+      <nav className={`transition-all backdrop-blur-3xl  text-center space-y-5 xl:hidden bg-stone-800 p-4 flex flex-col items-center justify-center z-[400] rounded-4xl container ease-in-out fixed top-30  ${menuOpen ? 'opacity-100' : 'opacity-0'} `}>
         <a
           href="#home"
           className="border p-10  w-full border-stone-600 rounded-2xl block py-2 text-white text-xl hover:text-gray-400 transition duration-300 transform hover:scale-105"
           onClick={(e) => {
             e.preventDefault();
             scrollToSection("home");
+            setMenuOpen(false);
           }}
         >
-          Sobre
+          Home
         </a>
         <a
           href="#about-me"
@@ -94,9 +95,10 @@ export default function Home() {
           onClick={(e) => {
             e.preventDefault();
             scrollToSection("about-me");
+            setMenuOpen(false);
           }}
         >
-          Projetos
+          Sobre
         </a>
         <a
           href="#contact"
@@ -104,6 +106,7 @@ export default function Home() {
           onClick={(e) => {
             e.preventDefault();
             scrollToSection("contact");
+            setMenuOpen(false);
           }}
         >
           Contato
@@ -114,7 +117,7 @@ export default function Home() {
       {/* home section */}
       <section
         id="home"
-        className="flex flex-col xl:flex-row items-center min-h-[100svh] container justify-center xl:justify-between"
+        className="flex flex-col xl:flex-row items-center min-h-[100svh] container justify-center xl:justify-between w-[97vw]"
         style={{ scrollSnapAlign: "start" }}
       >
         <div className="xl:w-1/2 text-center xl:text-left">
@@ -150,8 +153,9 @@ export default function Home() {
           transition={{ duration: 1 }}
         >
           <Image
-            src="/profile.svg"
+            src="/profile.png"
             alt="Alisson Peixer"
+            loading="lazy"
             width={400}
             height={400}
           />
@@ -200,33 +204,39 @@ export default function Home() {
       {/* fale comigo */}
       <section
         id="contact"
-        className="flex flex-col items-center min-h-screen container justify-center py-20"
+        className="flex flex-col xl:flex-row items-center min-h-screen container justify-center py-20"
       >
         <motion.div  
-          className="flex flex-col space-y-7 text-center mb-10"
           whileInView={{ opacity: 1, x: 0 }}
           initial={{ opacity: 0, x: 100 }}
           transition={{ duration: 1 }}
+          className="flex-1 flex flex-col  space-y-7  mb-10"
         >
           <h2 className="text-4xl font-semibold text-amber-50 mb-4">Contato</h2>
           <p className="text-lg xl:text-xl text-amber-100 mb-6">
             Entre em contato comigo!
           </p>
-          <a href="mailto:alisson.peixer@gmail.com" className="underline">
-            alisson.peixer@gmail.com
+          <a href="mailto:alissonpeixer.contato@gmail.com" target="_blank" className="underline flex items-center space-x-3">
+            <Mail size={30}/>
+            <span className="text-amber-50">alissonpeixer.contato@gmail.com</span>
+          </a>
+          <a href="https://www.linkedin.com/in/alissonpeixer/"  target="_blank" className="underline flex items-center space-x-3">
+            <Linkedin size={30}/>
+            <span className="text-amber-50">alissonpeixer</span>
           </a>
         </motion.div>
-
+      
         <motion.div 
           whileInView={{ opacity: 1, x: 0 }}
           initial={{ opacity: 0, x: 100 }}
           transition={{ duration: 1 }}
+          className="w-full flex flex-col items-center"
         >
           <div className="flex space-x-4 mb-10">
-            Ou me envie uma mensagem pelo formulário abaixo:
+            Ou me envie uma mensagem pelo formulário abaixo (Em Breve):
           </div>
           <form
-            action="https://formspree.io/f/your-form-id"
+            action="/api/contact-form"
             method="POST"
             className="w-full max-w-md"
           >
@@ -236,26 +246,30 @@ export default function Home() {
               name="name"
               placeholder="Nome"
               required
-              className="w-full p-4 mb-6 border rounded-md focus:outline-none"
+              className="w-full p-4 mb-6 border rounded-md focus:outline-none opacity-20"
+              disabled={true}
             />
             <input
               type="email"
               name="email"
               placeholder="Email"
               required
-              className="w-full p-4 mb-6 border rounded-md focus:outline-none"
+              className="w-full p-4 mb-6 border rounded-md focus:outline-none opacity-20"
+              disabled={true}
             />
             <textarea
               name="message"
               placeholder="Mensagem"
               required
-              className="w-full p-4 mb-6 border rounded-md focus:outline-none"
+              className="w-full p-4 mb-6 border rounded-md focus:outline-none opacity-20"
+              disabled={true}
             />
             <button
               type="submit"
-              className="w-full p-4 bg-amber-500 text-white rounded-md hover:bg-amber-400"
+              className="w-full p-4 bg-amber-500 text-white rounded-md hover:bg-amber-400 opacity-20"
+              disabled={true}
             >
-              Enviar
+              Indisponivel
             </button>
           </form>
         </motion.div>
