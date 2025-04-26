@@ -13,6 +13,12 @@ const montserrat = Montserrat({
 export const metadata: Metadata = {
   title: "Alisson Peixer",
   description: "Alisson Peixer - Desenvolvedor FullStack",
+  icons: {
+    other: [
+      {rel:'stylesheet',url:'https://cdn.jsdelivr.net/gh/dheereshagrwal/coloured-icons@1.9.0/src/app/ci.min.css'},
+      {rel:'stylesheet',url:'https://cdn.jsdelivr.net/gh/dheereshagrwal/coloured-icons@master/src/app/ci.min.css'},
+    ]
+  },
   keywords: [
     "alisson peixer",
     "description",
